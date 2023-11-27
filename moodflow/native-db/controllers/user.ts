@@ -5,8 +5,8 @@ const getUserController = async () => {
   return user;
 }
 
-const createUserController = async (username: string, password: string) => {
-  let user = await createUser(username, password);
+const createUserController = async (username: string, password: string, dob: string) => {
+  let user = await createUser(username, password, dob);
   return user;
 }
 
