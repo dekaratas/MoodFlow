@@ -2,7 +2,20 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   homeText: {
-    color: 'blue',
+    color: 'white',
+    backgroundColor: '#00AFD5',
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingTop: 20,
+  },
+  logo: {
+    height: 100,
+    width: 385,
+    resizeMode: 'contain',
+    marginTop: 20,
   },
 });
 
