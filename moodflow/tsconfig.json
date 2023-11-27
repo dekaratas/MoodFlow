@@ -5,6 +5,7 @@
   },
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "assets/**/*.svg"
   ]
 }
