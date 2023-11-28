@@ -3,11 +3,11 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   homeText: {
     color: 'white',
-    backgroundColor: '#00AFD5',
+    backgroundColor: '#1EAED7',
   },
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 20,
   },
