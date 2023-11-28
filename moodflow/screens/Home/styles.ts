@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 20,
   },
@@ -16,6 +16,12 @@ const styles = StyleSheet.create({
     width: 385,
     resizeMode: 'contain',
     marginTop: 20,
+  },
+  quoteHeader: {
+    height: 50,
+  },
+  quoteHeaderText: {
+    color: 'white',
   },
 });
 
