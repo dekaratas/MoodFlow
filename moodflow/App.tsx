@@ -3,12 +3,11 @@ import { StyleSheet, View } from 'react-native';
 
 import Home from './screens/Home/Home';
 import React from 'react';
-import CheckList from './screens/CheckList/CkeckList';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <CheckList />
+      <Home />
       <StatusBar style="auto" />
     </View>
   );
