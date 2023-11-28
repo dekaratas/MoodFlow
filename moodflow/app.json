@@ -6,13 +6,13 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "assets": ["./assets"],
     "androidStatusBar": {
-      "backgroundColor": "#ffffff"},
+      "backgroundColor": "#ffffff"
+    },
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Splash-screen-no-icons.png",
       "resizeMode": "contain",
-      "backgroundColor": "#3BAFD7"
+      "backgroundColor": "#1EAED7"
     },
     "assetBundlePatterns": [
       "**/*"
