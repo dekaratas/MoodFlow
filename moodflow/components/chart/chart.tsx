@@ -1,6 +1,10 @@
 import React, {useState} from "react";
-import { SafeAreaView, FlatList, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, FlatList, Text, View, Image } from 'react-native';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
+import styles from './chartStyles';
+const logo = require('../../assets/logo.png');
+const bottomLogo = require('../../assets/bottom-logo.png')
+
 
 const habitsList: string[] = [
    'Sleep quality',
@@ -39,6 +43,9 @@ const Chart = () => {
 
   return (
     <SafeAreaView style= {styles.container}>
+      <View>
+        <Image style={styles.img} source={logo}/>
+      </View>
       <View  >
         <Text style={styles.text} >Please let us know at {"\n"}least three habits that {"\n"}affect your mood: </Text>
       </View>
@@ -48,41 +55,13 @@ const Chart = () => {
             keyExtractor={( item ) => item}
             renderItem={listItem} />
       </View>
+      <View>
+        <Image style={styles.bottom} source={bottomLogo}/>
+      </View>
     </SafeAreaView>
   )
 }
 
-const styles = StyleSheet.create({
-container:{
-  flex: 1,
-  alignItems: 'center',
-  marginTop: 30,
-  backgroundColor: "#1EAED7",
-},
-  listItem: {
-    flex:2,
-    marginTop: 16,
-  },
-  textStyle:{
-    textDecorationLine: "none",
-    color: 'white',
-    fontSize: 25
-  },
-  list: {
-    borderColor: '#ffff',
-    borderStyle: 'solid',
-    borderWidth: 7,
-    borderRadius:10,
-    paddingLeft: 20,
-    paddingRight:50,
-    height: 300
 
-  },
-  text: {
-    marginVertical:50,
-    fontSize: 28,
-    color: 'white'
-  }
-});
 
 export default Chart;
