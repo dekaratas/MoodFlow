@@ -11,19 +11,28 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Svg height={height} width={width}>
-        <Image
-          href={imageSrc}
-          width={width}
-          height={height}
-          preserveAspectRatio="xMidYMin meet"
-          y={height / 6}
-        />
-      </Svg>
-      <View style={styles.quoteHeader}>
-        <Text style={styles.quoteHeaderText}>
-          Here is your quote of the day:
+      <View style={{ flex: 1 }}>
+        <Svg height={height} width={width}>
+          <Image
+            href={imageSrc}
+            width={width}
+            height={height}
+            preserveAspectRatio="xMidYMin meet"
+            y={height / 7.5}
+          />
+        </Svg>
+      </View>
+      <View style={styles.quoteContainer}>
+        <View style={styles.quoteHeader}>
+          <Text style={styles.quoteHeaderText}>
+            Here is your quote of the day:
+          </Text>
+        </View>
+        {/* <View style={styles.quote}> */}
+        <Text style={styles.quoteText}>
+          “It's not about what it is, it's about what it can become.” Dr. Seuss
         </Text>
+        {/* </View> */}
       </View>
     </View>
   );

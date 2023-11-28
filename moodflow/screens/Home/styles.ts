@@ -1,27 +1,29 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  homeText: {
-    color: 'white',
-    backgroundColor: '#1EAED7',
-  },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     paddingTop: 20,
   },
-  logo: {
-    height: 100,
-    width: 385,
-    resizeMode: 'contain',
-    marginTop: 20,
+  quoteContainer: {
+    flex: 2,
+    alignItems: 'center',
   },
   quoteHeader: {
-    height: 50,
+    paddingBottom: 10,
   },
   quoteHeaderText: {
     color: 'white',
+    backgroundColor: '#1EAED7',
+    fontSize: 22,
+  },
+  quoteText: {
+    color: 'white',
+    fontSize: 28,
+    marginHorizontal: 25,
+    fontStyle: 'italic',
   },
 });
 
