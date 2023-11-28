@@ -6,10 +6,13 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+    "androidStatusBar": {
       "backgroundColor": "#ffffff"
+    },
+    "splash": {
+      "image": "./assets/Splash-screen-no-icons.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1EAED7"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -24,7 +27,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/android-chrome-192x192.png"
     }
   }
 }

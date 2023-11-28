@@ -7,7 +7,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Home />
-      <StatusBar style="auto" />
+      <StatusBar style="auto" backgroundColor="#ffffff" />
     </View>
   );
 }
@@ -15,7 +15,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#00AFD5',
     alignItems: 'center',
     justifyContent: 'center',
   },
