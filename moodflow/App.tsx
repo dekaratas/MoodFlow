@@ -2,10 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 
 import Home from './screens/Home/Home';
+import React from 'react';
+import CheckList from './screens/CheckList/CkeckList';
 
 export default function App() {
   return (
     <View style={styles.container}>
+
       <Home />
       <StatusBar style="auto" backgroundColor="#ffffff" />
     </View>
@@ -15,7 +18,9 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00AFD5',
+
+    backgroundColor: '#1EAED7',
+
     alignItems: 'center',
     justifyContent: 'center',
   },
