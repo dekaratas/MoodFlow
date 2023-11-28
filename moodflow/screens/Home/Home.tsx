@@ -14,6 +14,7 @@ const Home = () => {
       <View style={{ flex: 1 }}>
         <Svg height={height} width={width}>
           <Image
+            testID="Logo"
             href={imageSrc}
             width={width}
             height={height}
