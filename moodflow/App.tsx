@@ -5,6 +5,7 @@ import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet } from 'react-native';
 
 import Home from './screens/Home/Home';
+
 import Settings from './screens/Settings/Settings';
 
 const Tab = createBottomTabNavigator();
@@ -20,11 +21,12 @@ const CustomScreenOptions = {
   },
   tabBarActiveTintColor: '#1EAED7',
   tabBarInactiveTintColor: 'grey',
-};
+
 
 export default function App() {
   return (
     <View style={styles.container}>
+
       <NavigationContainer>
         <Tab.Navigator screenOptions={CustomScreenOptions}>
           <Tab.Screen
@@ -47,7 +49,7 @@ export default function App() {
           />
         </Tab.Navigator>
         <StatusBar style="auto" backgroundColor="#ffffff" />
-      </NavigationContainer>
+
     </View>
   );
 }
@@ -55,6 +57,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#1EAED7',
+
+
   },
 });
