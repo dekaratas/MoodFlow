@@ -6,7 +6,6 @@ import { View, StyleSheet } from 'react-native';
 
 import Home from './screens/Home/Home';
 import React from 'react';
-import CheckList from './screens/CheckList/CkeckList';
 
 import Settings from './screens/Settings/Settings';
 

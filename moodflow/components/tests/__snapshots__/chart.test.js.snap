@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chart should render the page 1`] = `[Function]`;
+
+exports[`Chart should render the text 1`] = `[Function]`;
