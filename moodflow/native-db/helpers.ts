@@ -3,6 +3,6 @@ const timestampGenerator = () => {
   const timeNow = new Date(timeElapsed);
   const timeStamp = timeNow.toISOString();
   return timeStamp;
-}
+};
 
-export { timestampGenerator }
+export { timestampGenerator };
