@@ -5,6 +5,8 @@ import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet } from 'react-native';
 
 import Home from './screens/Home/Home';
+import React from 'react';
+import CheckList from './screens/CheckList/CkeckList';
 
 import Settings from './screens/Settings/Settings';
 
@@ -25,7 +27,6 @@ const CustomScreenOptions = {
 
 export default function App() {
   return (
-    <View style={styles.container}>
 
       <NavigationContainer>
         <Tab.Navigator screenOptions={CustomScreenOptions}>
@@ -49,15 +50,11 @@ export default function App() {
           />
         </Tab.Navigator>
         <StatusBar style="auto" backgroundColor="#ffffff" />
-
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-
-
   },
 });
