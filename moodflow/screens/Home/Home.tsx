@@ -1,5 +1,3 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { Text, View, Dimensions } from 'react-native';
 import Svg, { Image } from 'react-native-svg';
@@ -7,8 +5,6 @@ import Svg, { Image } from 'react-native-svg';
 import styles from './styles';
 
 const imageSrc = require('../../assets/MoodFlowLogo.png');
-
-const tab = createBottomTabNavigator();
 
 const Home = () => {
   const { height, width } = Dimensions.get('window');
