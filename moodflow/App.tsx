@@ -2,7 +2,7 @@ import { Feather } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-// import { StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
 import Home from './screens/Home/Home';
 import Settings from './screens/Settings/Settings';
@@ -10,9 +10,10 @@ import Settings from './screens/Settings/Settings';
 const Tab = createBottomTabNavigator();
 
 const CustomScreenOptions = {
+  headerShown: false,
   tabBarStyle: {
-    width: '95%',
-    backgroundColor: 'black',
+    width: '75%',
+    backgroundColor: 'white',
     alignSelf: 'center',
     borderTopLeftRadius: 15,
     borderTopRightRadius: 15,
@@ -23,21 +24,37 @@ const CustomScreenOptions = {
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Tab.Navigator screenOptions={CustomScreenOptions}>
-        <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Settings" component={Settings} />
-      </Tab.Navigator>
-      <StatusBar style="auto" backgroundColor="#ffffff" />
-    </NavigationContainer>
+    <View style={styles.container}>
+      <NavigationContainer>
+        <Tab.Navigator screenOptions={CustomScreenOptions}>
+          <Tab.Screen
+            name="Home"
+            component={Home}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Feather name="home" size={size} color={color} />
+              ),
+            }}
+          />
+          <Tab.Screen
+            name="Settings"
+            component={Settings}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <Feather name="settings" size={size} color={color} />
+              ),
+            }}
+          />
+        </Tab.Navigator>
+        <StatusBar style="auto" backgroundColor="#ffffff" />
+      </NavigationContainer>
+    </View>
   );
 }
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#1EAED7',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#1EAED7',
+  },
+});
