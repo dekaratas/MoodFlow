@@ -1,18 +1,27 @@
-const { logData, getSampleData } = require("./controllers/test_controller.js");
-const router = require("express").Router();
 const {
-  getNodes,
-  createPerson,
-  getAllNodesWithProperties,
-  createPersonWithMood,
-} = require("./controllers/graph_test_controller.js");
+  checkLoginData,
+  checkRegister,
+  authenticateToken,
+} = require("./controllers/authController.js");
+const {
+  logPostReq,
+  getNodesBasedOnDays,
+} = require("./controllers/flowchart_controller.js");
+const { postNewMessage } = require("./controllers/postController.js");
 
-router.get("/flow");
-router.post("/receiveData", logData);
-router.get("/receiveData", getSampleData);
-router.get("/getNodes", getNodes);
-router.post("/createNode", createPerson);
-router.get("/getFullNodes", getAllNodesWithProperties);
-router.post("/createMoodyNode", createPersonWithMood);
+const { receivePosts } = require("./controllers/postController.js");
+const router = require("express").Router();
 
+router.get("/getReq/:day", getNodesBasedOnDays);
+router.post("/postReq", logPostReq);
+router.post("/checkLogin", checkLoginData);
+router.post("/checkRegister", checkRegister);
+router.post("/createPost", authenticateToken, (req, res) => {
+  const currentUser = req.user;
+  const { message } = req.body;
+  postNewMessage(currentUser.username, message);
+  res.status(200).send("Post created");
+});
+router.post("/checkRegisterData", checkRegister);
+router.get("/receivePosts", receivePosts);
 module.exports = router;

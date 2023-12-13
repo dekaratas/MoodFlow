@@ -1,7 +1,14 @@
 import { timestampGenerator } from '../helpers';
 import db from '../index';
 
-const getAllJournals = async () => {
+interface Journal {
+  body: string;
+  created_at: string;
+  id: number;
+  title: string;
+}
+
+const getAllJournals = async (): Promise<Journal[]> => {
   return new Promise((resolve, reject) => {
     db.transaction(async (tx) => {
       tx.executeSql(
@@ -11,6 +18,21 @@ const getAllJournals = async () => {
         const result = rows._array;
         resolve(result);
       });
+    });
+  });
+};
+
+const getJournalById = async (id: number): Promise<Journal[] | []> => {
+  return new Promise((resolve, reject) => {
+    db.transaction(async (tx) => {
+      tx.executeSql(
+        'select * from journals where id = ?',
+        [id],
+        (_, { rows }) => {
+          const result = rows._array;
+          resolve(result);
+        },
+      );
     });
   });
 };
@@ -37,4 +59,9 @@ const deleteJournalEntry = async (id: number) => {
   });
 };
 
-export { getAllJournals, createJournalEntry, deleteJournalEntry };
+export {
+  getAllJournals,
+  getJournalById,
+  createJournalEntry,
+  deleteJournalEntry,
+};
